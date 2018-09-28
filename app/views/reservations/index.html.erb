@@ -1,0 +1,14 @@
+<h1>Kalendarz</h1>
+
+<div class="row">
+  <% @reservations.each do |reservation| %>
+    <div class="col s12 m12 l12">
+      <div class="card">
+        <div class="card-content">
+          <%= reservation[:date] %>
+          <%= reservation[:day] %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
