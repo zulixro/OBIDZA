@@ -1,12 +1,19 @@
-<h1>Kalendarz</h1>
+<h1>Kalendarz Obidza</h1>
 
 <div class="row">
   <% @reservations.each do |reservation| %>
     <div class="col s12 m12 l12">
       <div class="card">
-        <div class="card-content">
+        <div class="card-content <%= reservation[:state] %>">
           <%= reservation[:date] %>
           <%= reservation[:day] %>
+          <% if reservation[:name] %>
+            <div class="right">
+              <%= reservation[:name] %>
+            </div>
+          <% else %>
+            <i class="material-icons green-text small right">add_circle</i>
+          <% end %>
         </div>
       </div>
     </div>

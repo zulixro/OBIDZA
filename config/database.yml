@@ -23,14 +23,14 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: obidza_development
 
 test:
   <<: *default
-  database: myapp_test
+  database: obidza_test
 
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: obidza_production
+  username: obidza
+  password: <%= ENV['OBIDZA_DATABASE_PASSWORD'] %>
